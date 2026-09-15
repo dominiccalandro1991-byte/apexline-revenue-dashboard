@@ -1,10 +1,18 @@
 # Apexline
 
+**Open this on your phone to use the dashboard:**
+
+# [https://apexline-revenue-dashboard.vercel.app](https://apexline-revenue-dashboard.vercel.app)
+
+That is the live site. GitHub stores the source code — it is not the app itself. Clicking `localhost` in a README will never load anything on your phone.
+
+---
+
 Revenue intelligence dashboard for the **APEX** financial-commerce platform.
 
 Offline sample ledger. No accounts, no database, no live payments. Figures are generated, deterministic, and fully interactive.
 
-Archived 2026-09-15 from the Grok Build session so the full product lives in this repo independently of any chat subscription.
+Archived 2026-09-15 so the full product lives in this repo independently of any chat subscription.
 
 ---
 
@@ -26,24 +34,14 @@ Sample data runs from **2025-01-01** through **2026-09-13**.
 
 ---
 
-## Run it
+## Links
 
-Requires Node 22+.
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-```bash
-npm run typecheck   # TypeScript
-npm run build       # production (Vercel / Nitro)
-npm run preview     # serve the build on :4173
-```
-
-No `.env` file. No API keys. All metrics are computed in the browser from [`src/lib/revenue/sample-data.ts`](src/lib/revenue/sample-data.ts).
+| | |
+| --- | --- |
+| **Live dashboard** | [apexline-revenue-dashboard.vercel.app](https://apexline-revenue-dashboard.vercel.app) |
+| Source (this repo) | [github.com/dominiccalandro1991-byte/apexline-revenue-dashboard](https://github.com/dominiccalandro1991-byte/apexline-revenue-dashboard) |
+| Product spec | [docs/PRODUCT.md](docs/PRODUCT.md) |
+| APEX architecture | [docs/apex-architecture-specification.md](docs/apex-architecture-specification.md) |
 
 ---
 
@@ -91,7 +89,7 @@ apexline-revenue-dashboard/
 | Calendar | react-day-picker v9 |
 | Dates | date-fns |
 | Icons | lucide-react |
-| Build | Vite 8 + Nitro (Vercel preset) |
+| Hosting | Vercel (auto-deploys from `main`) |
 
 Auth and database are **off**. This is a client-computed dashboard.
 
@@ -114,6 +112,27 @@ Auth and database are **off**. This is a client-computed dashboard.
 | Down | `#C47A7A` |
 
 Share-card identity: [`src/lib/og/site.json`](src/lib/og/site.json) (`title: Apexline`, `color: C8CCD4`).
+
+---
+
+## Run from source (computer only)
+
+Requires Node 22+. Skip this unless you want to edit the code on a laptop — the live site above is already running.
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000` on that same computer. That address does not work on a phone.
+
+```bash
+npm run typecheck
+npm run build
+npm run preview
+```
+
+No `.env` file. No API keys. All metrics are computed from [`src/lib/revenue/sample-data.ts`](src/lib/revenue/sample-data.ts).
 
 ---
 
