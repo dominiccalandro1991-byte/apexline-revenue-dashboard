@@ -1,0 +1,23 @@
+{
+  "repo": "dominiccalandro1991-byte/apexline-revenue-dashboard",
+  "incomplete": false,
+  "missing_dependencies": [
+    "lockfile"
+  ],
+  "required_build_specs": [
+    "commit package-lock.json or pnpm-lock.yaml",
+    "voltcore-heartbeat workflow"
+  ],
+  "file_count": 9,
+  "root_entries": [
+    ".gitignore",
+    "README.md",
+    "docs",
+    "eslint.config.mjs",
+    "package.json",
+    "public",
+    "src",
+    "tsconfig.json",
+    "vite.config.ts"
+  ]
+}
